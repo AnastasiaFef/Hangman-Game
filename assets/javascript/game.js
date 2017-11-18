@@ -11,6 +11,60 @@ var states=["Alabama","Alaska","Arizona","Arkansas",
 "Utah","Vermont","Virginia","Washington","West Virginia",
 "Wisconsin","Wyoming"];
 
+function chooseWord(){
+	var compChoice = states[Math.floor(Math.random()*states.length)];
+	console.log (compChoice);
+	console.log("compChoice.length: "+compChoice.length);
+	return compChoice;
+	}
+
+function blankWord(){
+	var compChoiceArray = compChoice.split(" ");
+	console.log("Array: "+ compChoiceArray);
+	function first(){
+		var blWord = "";
+		for (var i=0; i<compChoiceArray[0].length; i++){
+		blWord += "_";
+		}
+	console.log(blWord);
+	return blWord;
+	}
+	var blankW= [];
+	blankW.push(first());
+	if (compChoiceArray.length == 2){
+		var blWord2 = "";
+		for (var i=0; i<compChoiceArray[1].length; i++){
+			blWord2 += "_";
+		}
+		blankW.push(blWord2);
+	}
+	console.log(blankW);
+	return blankW;
+}
+
+function appendWord(){
+	var div= document.createElement("div");
+	var text = document.createTextNode(blankW);
+	div.appendChild(textdiv);
+	document.querySelectorAll(".word").append(div);
+}
+
+
+compChoice=chooseWord();
+blankW = blankWord();
+appendWord()
+
+
+
+// document.getElementByClassName("word").append
+// if (compChoiceArray.length ==1){
+// } 
+
+
+// for (var i=0; i<compChoice.length; i++){
+// 	if
+// }
+// if compChoice
 
 
 document.onkeyup = function(event){
