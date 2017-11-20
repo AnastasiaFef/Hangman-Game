@@ -1,6 +1,5 @@
 body{
-	background: url('../images/faded-american-flag-1024x722.png');
-
+	background: url('../images/faded-american-flag.png');
 }
 .states{
 	width: 100%;
@@ -51,4 +50,9 @@ h1{
 .get_started{
 	font-style: italic;
 	color: grey;
+}
+footer{
+	height: 150px;
+	background: url('../images/skyline.png');
+	padding-bottom: 80px;
 }
