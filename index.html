@@ -6,18 +6,18 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 <body>
-	<div class="jumbotron vertical-center text-center">
-  		<h1>Hangman</h1>
-		<p>Guess the State</p>
+	<div class="my_header  vertical-center text-center">
+  		<h1 class=hang>Hangman</h1>
+		<p class=guess_state>Guess the State</p>
 		<p></p>
 	</div>
 	<div class=container>
 		<div class=row>
-			<div class=col-md-6>
-				<img class=states src="assets/images/United_States.png">
+			<div class="col-md-7">
+				<img class=states src="assets/images/usa-35713_1280.png">
 			</div>
-			<div class=col-md-6>
-				<p>Press any key to get started</p>
+			<div class="col-md-5 right">
+				<p class="get_started">Press any key to get started</p>
 				<br>
 				<div id=wins>Wins: 0</div> <!--# of times user guessed the word correctly-->
 				<br>
@@ -26,6 +26,7 @@
 				<p id=compWordTwo></p>
 				</div>
 				<div id=guesses>Number of guesses remaining: 12</div> <!--# of guesses remaining for the user-->
+				<br>
 				<div id=usedLetters>Letters already guessed:</div> <!--Letters the user has guessed, displayed like `L Z Y H`-->
 			</div>
 		</div>

@@ -27,7 +27,7 @@ function chooseWord(){
 	wrongGuessed=[];
 	document.getElementById("usedLetters").innerText="Letters already guessed: "+wrongGuessed ;
 	// clickedLetters =[];
-	console.log("clickedLetters : "+ clickedLetters);
+	console.log("clickedLetters on chooseWord: "+ clickedLetters);
 	// blankWord();
 	compChoiceArray = compChoice.split(" ");
 	console.log("compChoiceArray after restart: "+ compChoiceArray)
@@ -91,11 +91,10 @@ document.onkeyup = function(event){
 	}
 	else{
 		console.log("	/////////looking for a guessed letter "+userGuess)
-		
 		var letterAlreadyUsed = 0
 		for (var c=0; c<clickedLetters.length;c++){
 			if (userGuess === clickedLetters[c]){
-				console.log("this letter already was clicked");
+				console.log("ERROR: this letter already was clicked");
 				letterAlreadyUsed +=1;
 			}
 		}
@@ -104,7 +103,7 @@ document.onkeyup = function(event){
 			firstTimeLetter(userGuess);
 		}
 		clickedLetters.push(userGuess);
-		console.log("clickedLetters: "+clickedLetters + " ||| typeof:  " + typeof clickedLetters);
+		console.log("clickedLetters on ONKEYUP: "+clickedLetters + " ||| typeof:  " + typeof clickedLetters);
 	}
 }
 
@@ -118,7 +117,7 @@ function firstTimeLetter(){
 		if (compChoiceArray[0].substr(i, 1) === userGuess){	//substring func to replace arrayter
 			console.log("before replacement "+blankW);
 			// blankW=blankW[0].replaceAt(i,userGuess);
-			blankW[0] = blankW[0].substr(0, i) + userGuess + blankW[0].substr(i + 1);
+			blankW[0] = blankW[0].substr(0, i) + userGuess.toUpperCase() + blankW[0].substr(i + 1);
 			console.log("after replacenent: "+blankW);
 			met=true;
 		}
@@ -129,7 +128,7 @@ function firstTimeLetter(){
 			if (compChoiceArray[1].substr(i, 1) === userGuess){
 				console.log("before replacement of 2 "+blankW);
 				// blankW=blankW[0].replaceAt(i,userGuess);
-				blankW[1] = blankW[1].substr(0, i) + userGuess + blankW[1].substr(i + 1);
+				blankW[1] = blankW[1].substr(0, i) + userGuess.toUpperCase() + blankW[1].substr(i + 1);
 				console.log("after replacenent: of 2 "+blankW);
 				met=true;
 			}
