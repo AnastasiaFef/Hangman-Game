@@ -1,58 +1,74 @@
-body{
-	background: url('../images/faded-american-flag.png');
+body {
+  background: url("../images/faded-american-flag.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
 }
-.states{
-	width: 100%;
+
+html,
+body {
+  height: 100%;
+}
+
+.container {
+  flex: 1 0 auto;
+}
+
+.states {
+  width: 100%;
 }
 #compWordOne,
-#compWordTwo{
-	float:left;
-	margin-right: 15px;
-	font-size: 50px;
-	/*font-weight: lighter;*/
+#compWordTwo {
+  float: left;
+  margin-right: 15px;
+  font-size: 50px;
+  /* font-weight: lighter; */
 }
-#guesses{
-	clear: both;
+#guesses {
+  clear: both;
 }
 @media screen and (min-width: 990px) {
-	.right{
-/*		padding-left: 100px;
-*/	}
+  .right {
+    /*		padding-left: 100px;
+*/
+  }
 }
-h1{
-	background: url('../images/american-flag.png');
-    background-repeat:repeat-x;
-    background-position:0 0;
-    font-size:150px;
-    text-transform:uppercase;
-    text-align:center;
-    font-family:'Luckiest Guy';
-    color:transparent;
-    -webkit-font-smoothing:antialiased;
-    -webkit-background-clip:text;
-    -moz-background-clip:text;
-    background-clip:text;
-    -webkit-text-fill-color:transparent;
-    margin:0;
+h1 {
+  background: url("../images/american-flag.png");
+  background-repeat: repeat-x;
+  background-position: 0 0;
+  font-size: 150px;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: "Luckiest Guy";
+  color: transparent;
+  -webkit-font-smoothing: antialiased;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0;
 }
-.guess_state{
-	color: black;
-	font-size: 40px;
-	position: relative;
-	top: -20px;
-	font-style: italic;
-	/*-webkit-transform: rotate(-20deg);*/ /* Chrome, Safari, Opera 
+.guess_state {
+  color: black;
+  font-size: 40px;
+  position: relative;
+  top: -20px;
+  font-style: italic;
+  /*-webkit-transform: rotate(-20deg);*/ /* Chrome, Safari, Opera 
     transform: rotate(20deg); */
 }
-.col-md-5.right{
-	padding-top: 20px;
+.col-md-5.right {
+  padding-top: 20px;
 }
-.get_started{
-	font-style: italic;
-	color: grey;
+.get_started {
+  font-style: italic;
+  color: grey;
 }
-footer{
-	height: 150px;
-	background: url('../images/skyline.png');
-	padding-bottom: 80px;
+footer {
+  height: 150px;
+  background: url("../images/skyline.png");
+  padding-bottom: 80px;
+  flex-shrink: 0;
 }
